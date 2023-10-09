@@ -12,6 +12,10 @@
 
 @layer utilities {
   .transition-timing-snappy {
-    @apply ease-snap-in delay-150 duration-500;
+    @apply ease-snappier-in delay-150 duration-500;
+  }
+
+  .transition-timing-snappier {
+    @apply ease-snappier-in delay-150 duration-1000;
   }
 }
