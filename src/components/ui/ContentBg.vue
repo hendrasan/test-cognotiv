@@ -15,7 +15,7 @@ defineProps<{
   <div
     :class="
       cn(
-        'flex flex-row mt-10 lg:mt-0',
+        'flex flex-row fixed top-0',
         'lg:flex-col lg:fixed lg:top-0 lg:right-0 lg:z-10 lg:left-1/3 lg:w-2/3 transition-all transition-timing-snappier',
         isMounted ? 'grayscale' : ''
       )
@@ -26,7 +26,7 @@ defineProps<{
         : `translateX(calc(-${activeIndex} * 100vw))`
     }"
   >
-    <div class="min-w-full h-[calc(100vh_-_154px)] lg:h-auto lg:max-h-screen">
+    <div class="min-w-full h-[100vh] lg:h-auto lg:max-h-screen">
       <img
         class="w-full h-full lg:h-screen object-cover"
         src="/images/about-image.jpg"
@@ -34,7 +34,7 @@ defineProps<{
       />
     </div>
 
-    <div class="min-w-full h-[calc(100vh_-_154px)] lg:h-auto lg:max-h-screen">
+    <div class="min-w-full h-[100vh] lg:h-auto lg:max-h-screen">
       <img
         class="w-full h-full lg:h-screen object-cover"
         src="/images/product-image.jpg"
@@ -42,7 +42,7 @@ defineProps<{
       />
     </div>
 
-    <div class="min-w-full h-[calc(100vh_-_154px)] lg:h-auto lg:max-h-screen">
+    <div class="min-w-full h-[100vh] lg:h-auto lg:max-h-screen">
       <img
         class="w-full h-full lg:h-screen object-cover"
         src="/images/contact-image.jpg"

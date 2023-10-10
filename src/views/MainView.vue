@@ -5,6 +5,7 @@ import { cn } from '@/lib/cn'
 import IconArrowLeft from '@/components/icons/IconArrowLeft.vue'
 import NavItem from '@/components/ui/NavItem.vue'
 import ContentBg from '@/components/ui/ContentBg.vue'
+import AboutContent from '@/components/content/AboutContent.vue'
 
 const isLeaving = ref(false)
 const isMounted = ref(false)
@@ -107,6 +108,29 @@ const setActiveMenu = async (menu: string) => {
     <ContentBg :isMounted="isMounted" :activeIndex="activeIndex" />
 
     <!-- content -->
-    <h1>This is a main page</h1>
+    <div
+      :class="
+        cn(
+          'mt-5 px-5',
+          'lg:fixed lg:top-0 lg:left-1/2 lg:max-w-[40%] lg:h-full lg:z-20 lg:flex lg:flex-col lg:justify-center'
+        )
+      "
+    >
+      <!-- About content -->
+      <AboutContent
+        v-if="activeMenu === 'about'"
+        :isMounted="isMounted"
+        @click-button="
+          () => {
+            console.log('button clicked')
+            setActiveMenu('product')
+          }
+        "
+      />
+
+      <!-- Product content -->
+
+      <!-- Contact content -->
+    </div>
   </div>
 </template>
