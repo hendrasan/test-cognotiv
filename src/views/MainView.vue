@@ -8,6 +8,7 @@ import NavItem from '@/components/ui/NavItem.vue'
 import ContentBg from '@/components/ui/ContentBg.vue'
 import AboutContent from '@/components/content/AboutContent.vue'
 import ContactContent from '@/components/content/ContactContent.vue'
+import ProductContent from '@/components/content/ProductContent.vue'
 
 const route = useRoute()
 const router = useRouter()
@@ -147,6 +148,7 @@ const setActiveMenu = async (menu: string) => {
       />
 
       <!-- Product content -->
+      <ProductContent v-if="activeMenu === 'product'" :isMounted="isMounted" />
 
       <!-- Contact content -->
       <ContactContent
