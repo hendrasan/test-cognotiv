@@ -6,6 +6,7 @@ import IconArrowLeft from '@/components/icons/IconArrowLeft.vue'
 import NavItem from '@/components/ui/NavItem.vue'
 import ContentBg from '@/components/ui/ContentBg.vue'
 import AboutContent from '@/components/content/AboutContent.vue'
+import ContactContent from '@/components/content/ContactContent.vue'
 
 const isLeaving = ref(false)
 const isMounted = ref(false)
@@ -131,6 +132,15 @@ const setActiveMenu = async (menu: string) => {
       <!-- Product content -->
 
       <!-- Contact content -->
+      <ContactContent
+        v-if="activeMenu === 'contact'"
+        :isMounted="isMounted"
+        @click-button="
+          () => {
+            console.log('form submitted')
+          }
+        "
+      />
     </div>
   </div>
 </template>
