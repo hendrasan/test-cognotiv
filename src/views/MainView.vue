@@ -2,11 +2,22 @@
 import { computed, onMounted, ref, nextTick } from 'vue'
 import { onBeforeRouteLeave } from 'vue-router'
 import { cn } from '@/lib/cn'
+import { useRoute, useRouter } from 'vue-router'
 import IconArrowLeft from '@/components/icons/IconArrowLeft.vue'
 import NavItem from '@/components/ui/NavItem.vue'
 import ContentBg from '@/components/ui/ContentBg.vue'
 import AboutContent from '@/components/content/AboutContent.vue'
 import ContactContent from '@/components/content/ContactContent.vue'
+
+const route = useRoute()
+const router = useRouter()
+const currentRouteName = router.currentRoute.value.name
+
+const navigateTo = (routeName: string) => {
+  if (currentRouteName) {
+    router.push({ name: currentRouteName, query: { active: routeName } })
+  }
+}
 
 const isLeaving = ref(false)
 const isMounted = ref(false)
@@ -29,7 +40,11 @@ const menus = [
   }
 ]
 
-const activeMenu = ref('about')
+const currentActiveQueryParams = route.query.active as string
+
+const defaultRoute = currentActiveQueryParams ?? 'about'
+const activeMenu = ref(defaultRoute)
+
 // find the index of the active menu
 const activeIndex = computed(() => {
   return menus.findIndex((menu) => menu.slug === activeMenu.value)
@@ -55,6 +70,8 @@ onMounted(() => {
 const setActiveMenu = async (menu: string) => {
   activeMenu.value = menu
   isMounted.value = false
+
+  navigateTo(menu)
 
   await nextTick()
 
