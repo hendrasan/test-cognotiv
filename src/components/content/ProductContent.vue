@@ -62,18 +62,18 @@ const onSubmitForm = () => {
         <div
           :class="
             cn(
-              'bg-white/50 shadow-card text-neutral rounded-2lg p-8 2xl:p-12 lg:opacity-100 scale-0 min-h-[200px] lg:max-w-[400px]',
+              'bg-white/50 shadow-card text-neutral rounded-2lg p-8 lg:opacity-100 scale-0 min-h-[200px] lg:max-w-[400px]',
               isMounted ? 'transition-timing-snappier scale-100 transition-transform' : 'scale-0'
             )
           "
         >
           <h2
-            class="text-dark font-bold text-2x mb-5 lg:leading-tight lg:mb-10 text-4xl lg:text-5xl 2xl:text-6xl"
+            class="text-dark font-bold text-2x mb-5 lg:leading-tight lg:mb-10 text-4xl lg:text-5xl"
           >
             We Solve <br class="hidden lg:block" />Your
           </h2>
           <span
-            class="block relative overflow-hidden text-white font-bold uppercase text-3xl lg:text-5xl 2xl:text-6xl before:absolute before:animate-fill-in before:content-['Problem'] before:uppercase before:text-primary before:overflow-hidden"
+            class="block relative overflow-hidden text-white font-bold uppercase text-3xl lg:text-5xl before:absolute before:animate-fill-in before:content-['Problem'] before:uppercase before:text-primary before:overflow-hidden"
             >Problem</span
           >
         </div>

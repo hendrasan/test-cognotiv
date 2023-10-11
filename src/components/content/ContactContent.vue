@@ -48,7 +48,7 @@ const onSubmitForm = () => {
     <div
       :class="
         cn(
-          'bg-white/50 shadow-card text-neutral rounded-2lg p-4 lg:p-8 2xl:p-12 lg:opacity-100 scale-0 lg:min-w-[500px]',
+          'bg-white/50 shadow-card text-neutral rounded-2lg p-4 lg:p-8 lg:opacity-100 scale-0 lg:min-w-[500px]',
           isMounted ? 'transition-timing-snappier scale-100 transition-transform' : 'scale-0'
         )
       "

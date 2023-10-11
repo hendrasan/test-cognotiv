@@ -14,12 +14,8 @@ const updateValue = (e: Event) => {
 </script>
 
 <template>
-  <div class="space-y-2 lg:space-y-4 2xl:space-y-6">
-    <label
-      v-if="label"
-      class="block font-bold text-neutral text-lg lg:text-2xl 2xl:text-3xl"
-      :for="id"
-    >
+  <div class="space-y-2 lg:space-y-4">
+    <label v-if="label" class="block font-bold text-neutral text-lg lg:text-2xl" :for="id">
       {{ label }}
     </label>
     <div class="relative">

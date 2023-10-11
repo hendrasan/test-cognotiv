@@ -27,7 +27,7 @@ defineEmits<{
     <div
       :class="
         cn(
-          'bg-white/50 shadow-card text-neutral rounded-2lg p-4 lg:p-8 2xl:p-12 opacity-0 translate-y-10 lg:opacity-100 lg:translate-y-0 lg:translate-x-[100vw]',
+          'bg-white/50 shadow-card text-neutral rounded-2lg p-4 lg:p-8 opacity-0 translate-y-10 lg:opacity-100 lg:translate-y-0 lg:translate-x-[100vw]',
           isMounted
             ? 'animate-fade-in-up transition-timing-snappier lg:translate-x-0 lg:transition-transform'
             : 'lg:transition-opacity lg:opacity-0'
@@ -38,7 +38,7 @@ defineEmits<{
         <h1
           :class="
             cn(
-              'font-bold text-2xl leading-none lg:text-4xl 2xl:text-6xl opacity-0 translate-x-10',
+              'font-bold text-2xl leading-none lg:text-4xl opacity-0 translate-x-10',
               isMounted ? 'animate-fade-in-left animation-delay-[750ms]' : ''
             )
           "
@@ -48,7 +48,7 @@ defineEmits<{
         <p
           :class="
             cn(
-              'font-semibold text-lg leading-snug lg:text-2xl 2xl:text-4xl opacity-0 translate-x-10',
+              'font-semibold text-lg leading-snug lg:text-2xl opacity-0 translate-x-10',
               isMounted ? 'animate-fade-in-left animation-delay-[850ms]' : ''
             )
           "

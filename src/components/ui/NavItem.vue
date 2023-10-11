@@ -27,7 +27,7 @@ defineEmits<{
   >
     <a
       href="#"
-      :class="cn('font-semibold', 'lg:font-bold lg:text-5xl 2xl:text-7xl')"
+      :class="cn('font-semibold', 'lg:font-bold lg:text-5xl 2xl:text-6xl')"
       @click="$emit('select-menu', slug)"
     >
       {{ label }}
