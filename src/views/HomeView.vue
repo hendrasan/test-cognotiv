@@ -110,9 +110,11 @@ onBeforeRouteLeave((to, from, next) => {
           >
             <RouterLink
               to="/main"
-              class="inline-flex items-center gap-8 leading-none z-[2] -translate-y-1/2 group/btn bg-primary lg:bg-transparent lg:hover:bg-primary px-6 py-4 rounded-lg"
+              class="lg:relative inline-flex items-center gap-8 leading-none z-[2] -translate-y-1/2 group/btn bg-primary lg:bg-transparent px-6 py-4 rounded-lg lg:group/btn lg:overflow-hidden"
             >
-              <!-- <span class="rounded bg-primary"></span> -->
+              <span
+                class="hidden lg:block lg:absolute lg:top-0 lg:left-0 lg:w-full lg:h-full lg:rounded-lg lg:bg-primary lg:transform-translate lg:transition-timing-snappy lg:-translate-x-full lg:group-hover/btn:translate-x-0"
+              ></span>
               <span
                 class="shrink-0 uppercase font-bold text-white lg:text-primary text-3xl lg:text-5xl group-hover/btn:text-white transition-all transition-timing-snappy lg:-translate-x-full lg:invisible lg:opacity-0 lg:group-hover:translate-x-0 lg:group-hover:visible lg:group-hover:opacity-100"
                 >Awesome Things</span
