@@ -5,6 +5,8 @@ import { Arrow } from '@egjs/flicking-plugins'
 import '@egjs/vue3-flicking/dist/flicking.css'
 import IconPlay from '../icons/IconPlay.vue'
 
+const plugins = [new Arrow()]
+
 defineProps<{
   isMounted: boolean
 }>()
@@ -19,7 +21,7 @@ defineProps<{
       )
     "
   >
-    <Flicking :plugins="[new Arrow()]" :options="{ align: 'center', circular: true }">
+    <Flicking :plugins="plugins" :options="{ align: 'center', circular: true }">
       <div
         v-for="index in 3"
         :key="index"
