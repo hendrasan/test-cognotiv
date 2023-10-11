@@ -18,6 +18,7 @@ import { RouterView } from 'vue-router'
   background-size: cover;
   width: 100vw;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 .fade-enter-active,
