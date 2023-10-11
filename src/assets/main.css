@@ -18,4 +18,12 @@
   .transition-timing-snappier {
     @apply ease-snappier-in delay-150 duration-1000;
   }
+
+  .text-fill {
+    @apply bg-[linear-gradient(to_right,_white_0%,_white_50%,_theme(colors.primary)_50%,_theme(colors.primary)_200%)];
+    /* background: linear-gradient(to right, white 0%, white 50%, yellow 50%, yellow 200%); */
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }

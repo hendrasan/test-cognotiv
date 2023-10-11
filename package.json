@@ -12,10 +12,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@egjs/flicking-plugins": "^4.7.1",
+    "@egjs/vue3-flicking": "^4.11.0",
     "@vueuse/core": "^10.5.0",
     "clsx": "^2.0.0",
     "pinia": "^2.1.6",
-    "swiper": "^10.3.1",
     "tailwind-merge": "^1.14.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
